@@ -1,0 +1,44 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "",
+    "description": "Food journal app"
+  },
+  "host": "localhost:54322",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/auth": {
+      "login": {
+        "description": "Signs user in",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "body",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "email",
+            "in": "body",
+            "required": true,
+            "type": "number"
+          },
+          {
+            "name": "password",
+            "in": "body",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Authentication success"
+          }
+        }
+      }
+    }
+  }
+}
